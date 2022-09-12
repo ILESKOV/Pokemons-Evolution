@@ -85,7 +85,6 @@ STONES_ADDRESS = <Level.sol address>
 
 ```
 
-![Example screenshot](./helpers/Screenshot9.png)
 
 ### 4. ⚠️ Run Tests
 ```
