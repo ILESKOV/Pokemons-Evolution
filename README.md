@@ -75,24 +75,24 @@ Create .env file inside project folder
 - STONES_ADDRESS(address of Stones.sol) will be available after deploying contracts
 ```
 PRIVATE_KEY = <Private key of your wallet u want to deploy contracts from>
-//
+
 GOERLI_API = <Goerli API key>
 MAINNET_API = <Ethereum mainnet API key>
 ETHERSCAN_KEY = <Etherscan API key in order to verify your contracts>
-//
+
 POLYGON_API = <Polygon API key>
 MUMBAI_API = <Mumbai API key>
 POLYGONSCAN_KEY = <Etherscan API key in order to verify your contracts>
-//
+
 BSC_TESTNET_API = <BSC API key>
 BSCSCAN_KEY = <Etherscan API key in order to verify your contracts>
-//
+
 AVALANCHE_FUJI_API = <Avalanche API key>
 SNOWTRACE_KEY = <Etherscan API key in order to verify your contracts>
-//
+
 FANTOM_TESTNET_API = <Fantom API key>
 FTMSCAN_KEY = <Etherscan API key in order to verify your contracts>
-//
+
 INITIAL_LEVEL_SUPPLY = <Example: 1000000000000000000000>
 LEVEL_TOKEN_PRICE = <Example: 200000>
 STONES_TOKEN_PRICE  = <Example: 200000>
