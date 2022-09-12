@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/Pokemon.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> Pokemon.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/45</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/28</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//SPDX-License-Identifier: Unlicense
+pragma solidity 0.8.15;
+&nbsp;
+import "./interfaces/IERC1155Burnable.sol";
+import "./interfaces/IERC20Burnable.sol";
+import "./PokemonStorage.sol";
+&nbsp;
+/**
+ * @title Family contract.
+ * NOTE: Contract allows users to mint standard ERC 721 tokens of type MAN or WOMAN,
+ * after that, the user can create a KID token, when the KID token reaches maturity,
+ * they become adults MAN or WOMAN.
+ * @dev According to this contract one day equals one year, so each day each
+ * contract will be a year older.
+ */
+contract Pokemons is PokemonStorage {
+    uint256 private _upgradeFee;
+    uint256 private _mintFee;
+    IERC20Burnable private _level;
+    IERC1155Burnable private _stones;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function mintRandomPokemon() external payable {</span>
+<span class="cstat-no" title="statement not covered" >        require(msg.value &gt;= _mintFee, "Mint fee required")</span>;
+<span class="cstat-no" title="statement not covered" >        uint256 pseudoRandom = (uint256(keccak256(abi.encodePacked(block.timestamp, block.difficulty, msg.sender))) %</span>
+            995) + 1;
+<span class="cstat-no" title="statement not covered" >        _mint(msg.sender, pseudoRandom, 1, "")</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function upgradePokemon(uint256 pokemonNumber) external {</span>
+<span class="cstat-no" title="statement not covered" >        (uint256 whichMethodOfUpgrade, uint256 newPokemon) = checkAvailableUpgrade(pokemonNumber);</span>
+<span class="cstat-no" title="statement not covered" >        if (whichMethodOfUpgrade &lt; 14) {</span>
+<span class="cstat-no" title="statement not covered" >            require(_stones.balanceOf(msg.sender, whichMethodOfUpgrade) &gt; 0, "Thunder stone required")</span>;
+<span class="cstat-no" title="statement not covered" >            _stones.setApprovalForAll(address(this), true)</span>;
+<span class="cstat-no" title="statement not covered" >            _stones.burn(msg.sender, whichMethodOfUpgrade, 1)</span>;
+<span class="cstat-no" title="statement not covered" >            _mint(msg.sender, newPokemon, 1, "")</span>;
+        } else <span class="cstat-no" title="statement not covered" >if (whichMethodOfUpgrade == 14) {</span>
+<span class="cstat-no" title="statement not covered" >            require(_level.balanceOf(msg.sender) &gt;= _upgradeFee * 10**18, "Level tokens required")</span>;
+<span class="cstat-no" title="statement not covered" >            _level.burn(_upgradeFee * 10**18)</span>;
+<span class="cstat-no" title="statement not covered" >            _mint(msg.sender, pokemonNumber++, 1, "")</span>;
+        } else <span class="cstat-no" title="statement not covered" >revert("Token cannot be updated")</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function checkAvailableUpgrade(uint256 pokemonNumber) private view returns (uint256, uint256) {</span>
+<span class="cstat-no" title="statement not covered" >        if (true == isUpgradeNotAvailable(pokemonNumber)) {</span>
+<span class="cstat-no" title="statement not covered" >            return (14, 0);</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isThunderUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (0, isThunderUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isMoonUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (1, isMoonUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isFireUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (2, isFireUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isLeafUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (3, isLeafUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isSunUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (4, isSunUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isWaterUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (5, isWaterUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isBlackAuguriteUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (6, isBlackAuguriteUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isShinyUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (7, isShinyUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isDuskUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (8, isDuskUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isRazorClawUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (9, isRazorClawUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isPeatBlockUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (10, isPeatBlockUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isTartAppleUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (11, isTartAppleUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isCrackedPotUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (12, isCrackedPotUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (isOvalUpgradeAvailable(pokemonNumber) != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return (13, isOvalUpgradeAvailable(pokemonNumber));</span>
+        } else <span class="cstat-no" title="statement not covered" >return (15, 16);</span>
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Sep 11 2022 02:44:14 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

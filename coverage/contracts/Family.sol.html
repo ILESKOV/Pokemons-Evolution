@@ -1,0 +1,1247 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/Family.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> Family.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.16% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>56/69</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80.56% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>29/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>16/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.43% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>57/70</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">558×</span>
+<span class="cline-any cline-yes">557×</span>
+<span class="cline-any cline-yes">556×</span>
+<span class="cline-any cline-yes">555×</span>
+<span class="cline-any cline-yes">555×</span>
+<span class="cline-any cline-yes">555×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">316×</span>
+<span class="cline-any cline-yes">315×</span>
+<span class="cline-any cline-yes">314×</span>
+<span class="cline-any cline-yes">314×</span>
+<span class="cline-any cline-yes">314×</span>
+<span class="cline-any cline-yes">314×</span>
+<span class="cline-any cline-yes">164×</span>
+<span class="cline-any cline-yes">164×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">150×</span>
+<span class="cline-any cline-yes">150×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">314×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">78×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">478×</span>
+<span class="cline-any cline-yes">478×</span>
+<span class="cline-any cline-yes">478×</span>
+<span class="cline-any cline-yes">478×</span>
+<span class="cline-any cline-yes">478×</span>
+<span class="cline-any cline-yes">478×</span>
+<span class="cline-any cline-yes">478×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">478×</span>
+<span class="cline-any cline-yes">478×</span>
+<span class="cline-any cline-yes">478×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">126×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">166×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">62×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">138×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">331×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">167×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">137×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//SPDX-License-Identifier: Unlicense
+pragma solidity 0.8.15;
+&nbsp;
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+&nbsp;
+/**
+ * @title Family contract.
+ * NOTE: Contract allows users to mint standard ERC 721 tokens of type MAN or WOMAN,
+ * after that, the user can create a KID token, when the KID token reaches maturity,
+ * they become adults MAN or WOMAN.
+ * @dev According to this contract one day equals one year, so each day each
+ * contract will be a year older.
+ */
+contract Family is ERC721, Ownable {
+    enum GENDER {
+        MAN,
+        WOMEN,
+        KID_BOY,
+        KID_GIRL
+    }
+&nbsp;
+    struct Human {
+        uint256 id;
+        GENDER gender;
+        bytes32 name;
+        bytes32 lastname;
+        uint256 actualAge;
+        uint256 mintAge;
+        uint256 mintTime;
+        address owner;
+    }
+&nbsp;
+    uint256 private _mintPrice;
+    uint256 private _totalSupply;
+    uint256 private _maxSupply;
+    uint256 private _maturityAge;
+&nbsp;
+    Human[] private _peoples;
+&nbsp;
+    // Mapping from token ID to owner address.
+    mapping(uint256 =&gt; address) private _humanToOwner;
+    // Mapping from owner address to count of owner tokens.
+    mapping(address =&gt; uint256) private _ownerHumanCount;
+&nbsp;
+    /**
+     * @dev Emitted when new token minted.
+     * @param id token Id.
+     * @param gender GENDER type(MAN, WOMEN, KID_BOY or KID_GIRL).
+     * @param name given name of human.
+     * @param lastname given lastname of human.
+     * @param age age of human at the moment of mint.
+     * @param mintTime block.timestamp of mint.
+     * @param owner address of the owner of the tokens.
+     */
+    event NewHuman(
+        uint256 id,
+        GENDER indexed gender,
+        bytes32 name,
+        bytes32 lastname,
+        uint256 age,
+        uint32 mintTime,
+        address indexed owner
+    );
+&nbsp;
+    /**
+     * @dev Emitted when checkAgeChanging called.
+     * @param id token Id.
+     * @param gender GENDER type(MAN, WOMEN, KID_BOY or KID_GIRL).
+     * @param name given name of human.
+     * @param lastname given lastname of human.
+     * @param actualAge age at the time the function was called.
+     * @param mintAge age of human at the moment of mint.
+     * @param mintTime block.timestamp of mint.
+     * @param owner address of the owner of the tokens.
+     */
+    event AgeUpdated(
+        uint256 id,
+        GENDER indexed gender,
+        bytes32 name,
+        bytes32 lastname,
+        uint256 actualAge,
+        uint256 mintAge,
+        uint256 mintTime,
+        address indexed owner
+    );
+&nbsp;
+    /**
+     * @dev Emitted when the owner withdraw ether from the contract.
+     * @param owner owner address.
+     * @param amount amount of ether.
+     */
+    event WithdrawalOfOwner(address owner, uint256 indexed amount);
+&nbsp;
+    /**
+     * @dev Emitted when the owner updates max supply.
+     * @param newMaxSupply new _maxSupply.
+     */
+    event MaxSupplyUpdated(uint256 newMaxSupply);
+&nbsp;
+    /**
+     * @dev Emitted when the holder updates the maturity age for the tokens.
+     * @param newMaturityAge new _maturityAge.
+     */
+    event MaturityAgeUpdated(uint256 newMaturityAge);
+&nbsp;
+    /**
+     * @dev Emitted when the owner updates the minted token price.
+     * @param newMintPrice new _maturityAge.
+     */
+    event MintPriceUpdated(uint256 newMintPrice);
+&nbsp;
+    /**
+     * @dev Contract inherited from ERC721 openZeppelin contract and contains
+     * arguments for creating a collection of ERC721 tokens.
+     * @param mintPrice_ initial mint price for mintHuman().
+     * @param maxSupply_ initial max Supply for tokens.
+     * @param maturityAge_ initial maturity age for tokens at which a breeding()
+     * function can be called.
+     */
+    constructor(
+        uint256 mintPrice_,
+        uint256 maxSupply_,
+        uint256 maturityAge_
+    ) ERC721("Family", "FAM") {
+        require(mintPrice_ &gt; 0, "Mint price cannot be zero");
+        require(maxSupply_ &gt; 0, "Max supply cannot be zero");
+        require(maturityAge_ &gt; 16, "Maturity age must be higher than 16");
+        _mintPrice = mintPrice_;
+        _maxSupply = maxSupply_;
+        _maturityAge = maturityAge_;
+    }
+&nbsp;
+    /**
+     * @dev This is a function to mint MAN or WOMAN tokens dependig on pseudo randomness.
+     * The mint costs ether and the price of the mint is set by the owner.
+     *
+     * Requirements:
+     *
+     * - `msg.value` must be higher or equal to `_mintPrice`.
+     * - Users can mint tokens until the `_maxSupply` value is reached.
+     *
+     * @param manName_ The human token name if it will be pseudo randomly minted as a MAN token.
+     * @param womanName_ The human token name if it will be pseudo randomly minted as a WOMAN token.
+     * @param lastname_ The human token lastname.
+     *
+     * Emits a {NewHuman} event.
+     */
+    function mintHuman(
+        bytes32 manName_,
+        bytes32 womanName_,
+        bytes32 lastname_
+    ) external payable virtual {
+        require(msg.value &gt;= _mintPrice, "Not enough ether for a mint");
+        require(_totalSupply &lt;= _maxSupply, "Collection sold out");
+        uint256 pseudoRandom = uint256(keccak256(abi.encodePacked(block.timestamp, block.difficulty, msg.sender))) % 2;
+        GENDER gender;
+        bytes32 name_;
+        if (pseudoRandom == 0) {
+            gender = GENDER.MAN;
+            name_ = manName_;
+        } else {
+            gender = GENDER.WOMEN;
+            name_ = womanName_;
+        }
+        _mintHuman(_totalSupply, gender, name_, lastname_, _maturityAge);
+    }
+&nbsp;
+    /**
+     * @dev This is a function to mint KID_BOY or KID_GIRL tokens depending on pseudo randomness.
+     * In order to call this function user required to have MAN and WOMAN types of token.
+     * New KID token will have lastname from the first parent and initial age is set to 0.
+     * Mint does not require additional ether.
+     *
+     * Requirements:
+     *
+     * - Users can breed tokens until the `_maxSupply` value is reached.
+     * - `_firstParentID` and `_secondParentID` must be different values.
+     * - `_humanToOwner[_firstParentID]` and `_humanToOwner[_secondParentID]` must be `msg.sender` address.
+     * - `_firstParentID` and `_secondParentID` Humans `actualAge` must reach `_maturityAge`.
+     * - `_peoples[_firstParentID].gender` and `_peoples[_secondParentID].gender` must be different values.
+     *
+     * @param _firstParentID id of first parent token.
+     * @param _secondParentID id of second parent token.
+     * @param _boyName The human token name if it will be pseudo randomly minted as a KID_BOY token.
+     * @param _girlName The human token name if it will be pseudo randomly minted as a KID_GIRL token.
+     *
+     * Emits a {NewHuman} event.
+     */
+    function breeding(
+        uint256 _firstParentID,
+        uint256 _secondParentID,
+        bytes32 _boyName,
+        bytes32 _girlName
+    ) external virtual {
+        require(_totalSupply &lt;= _maxSupply, "Collection sold out");
+        require(_firstParentID != _secondParentID, "One parent cannot reproduce alone");
+        <span class="missing-if-branch" title="if path not taken" >I</span>require(
+            _humanToOwner[_firstParentID] == msg.sender &amp;&amp; _humanToOwner[_secondParentID] == msg.sender,
+            "You are not the owner of one or more NFTs"
+        );
+<span class="cstat-no" title="statement not covered" >        require(</span>
+            checkAgeChanging(_firstParentID) &gt;= _maturityAge &amp;&amp; checkAgeChanging(_secondParentID) == _maturityAge,
+            "One or more of your tokens are not mature enough"
+        );
+<span class="cstat-no" title="statement not covered" >        Human memory firstParent = _peoples[_firstParentID];</span>
+<span class="cstat-no" title="statement not covered" >        require(</span>
+            (firstParent.gender) != (_peoples[_secondParentID].gender),
+            "Tokens share the same gender and cannot reproduce themselves"
+        );
+<span class="cstat-no" title="statement not covered" >        uint256 pseudoRandom = uint256(</span>
+            keccak256(abi.encodePacked(block.difficulty, block.timestamp, _boyName, _girlName, msg.sender))
+        ) % 2;
+<span class="cstat-no" title="statement not covered" >        GENDER gender;</span>
+<span class="cstat-no" title="statement not covered" >        bytes32 name_;</span>
+<span class="cstat-no" title="statement not covered" >        if (pseudoRandom == 0) {</span>
+<span class="cstat-no" title="statement not covered" >            gender = GENDER.KID_BOY</span>;
+<span class="cstat-no" title="statement not covered" >            name_ = _boyName</span>;
+        } else {
+<span class="cstat-no" title="statement not covered" >            gender = GENDER.KID_GIRL</span>;
+<span class="cstat-no" title="statement not covered" >            name_ = _girlName</span>;
+        }
+<span class="cstat-no" title="statement not covered" >        bytes32 lastname_ = firstParent.lastname;</span>
+<span class="cstat-no" title="statement not covered" >        _mintHuman(_totalSupply, gender, name_, lastname_, 0)</span>;
+    }
+&nbsp;
+    /**
+     * @dev This is a function to check and update the actual age of a human token.
+     * Can only be called by the owner of the token.
+     * Function update KID tokens to MAN or WOMEN in case they reach maturity age.
+     * @param _id token id to check.
+     *
+     * Emits a {AgeUpdated} event.
+     */
+    function checkAgeChanging(uint256 _id) public returns (uint256) {
+        require(_humanToOwner[_id] == msg.sender, "You are not the owner of this NFT");
+        Human memory human = _peoples[_id];
+        _peoples[_id].actualAge = (block.timestamp - human.mintTime) / 86400 + human.mintAge;
+        uint256 actualAge = _peoples[_id].actualAge;
+        if (human.gender == GENDER.KID_BOY &amp;&amp; actualAge &gt;= _maturityAge) {
+            _peoples[_id].gender = GENDER.MAN;
+        } else if (human.gender == GENDER.KID_GIRL &amp;&amp; actualAge &gt;= _maturityAge) {
+            _peoples[_id].gender = GENDER.WOMEN;
+        }
+        emit AgeUpdated(
+            _id,
+            human.gender,
+            human.name,
+            human.lastname,
+            actualAge,
+            human.mintAge,
+            human.mintTime,
+            msg.sender
+        );
+        return actualAge;
+    }
+&nbsp;
+    /**
+     * @dev This function contains the common functionality of mintHuman() and breeding()
+     * functions. Updates mappings, adds token data to _peoples[] array.
+     * @param tokenId_ id of new token.
+     * @param gender_ pseudo randomly selected token gender.
+     * @param name_ The human token name.
+     * @param lastname_ The human token lastname.
+     * @param age_ actual and mint age of the token.
+     *
+     * Emits a {NewHuman} event.
+     */
+    function _mintHuman(
+        uint256 tokenId_,
+        GENDER gender_,
+        bytes32 name_,
+        bytes32 lastname_,
+        uint256 age_
+    ) internal {
+        address caller = msg.sender;
+        uint256 tokenId = _totalSupply;
+        _ownerHumanCount[caller]++;
+        _totalSupply++;
+        _humanToOwner[tokenId_] = caller;
+        uint32 mintTime_ = uint32(block.timestamp);
+        Human memory human = Human({
+            id: tokenId,
+            gender: gender_,
+            name: name_,
+            lastname: lastname_,
+            actualAge: age_,
+            mintAge: age_,
+            mintTime: mintTime_,
+            owner: caller
+        });
+        _peoples.push(human);
+        _safeMint(caller, tokenId_);
+        emit NewHuman(tokenId, gender_, name_, lastname_, age_, mintTime_, caller);
+    }
+&nbsp;
+    /**
+     * @dev Set new _maxSupply. new max Supply required to be equal or higher
+     * than _totalSupply. Can only be called by the owner of the contract.
+     * @param maxSupply_ new max Supply of tokens.
+     *
+     * Emits a {MaxSupplyUpdated} event.
+     */
+    function setMaxSupply(uint256 maxSupply_) external onlyOwner {
+        require(maxSupply_ &gt;= _totalSupply, "Max supply cannot be lower than total supply");
+        _maxSupply = maxSupply_;
+        emit MaxSupplyUpdated(maxSupply_);
+    }
+&nbsp;
+    /**
+     * @dev Set new _maturityAge. When the age of maturity reached by KID tokens, they
+     *  becomes MAN or WOMAN tokens. Can only be called by the owner of the contract.
+     * @param maturityAge_ new age of maturity.
+     *
+     * Emits a {MaturityAgeUpdated} event.
+     */
+    function setMaturityAge(uint256 maturityAge_) external onlyOwner {
+        require(maturityAge_ &gt;= 16, "Needs to be older");
+        _maturityAge = maturityAge_;
+        emit MaturityAgeUpdated(maturityAge_);
+    }
+&nbsp;
+    /**
+     * @dev Set new _mintPrice. Users are required to pay this price whenever they want
+     *  call mintHuman() function. Can only be called by the owner of the contract.
+     * @param newMintPrice_ new mint human price.
+     *
+     * Emits a {MintPriceUpdated} event.
+     */
+    function setMintPrice(uint256 newMintPrice_) external onlyOwner {
+        _mintPrice = newMintPrice_;
+        emit MintPriceUpdated(newMintPrice_);
+    }
+&nbsp;
+    /**
+     * @dev Owner can withdraw Ether from contract.
+     *
+     * Emits a {WithdrawalOfOwner} event.
+     */
+    function withdrawETH(uint256 amount) external onlyOwner {
+        require(amount &lt;= address(this).balance, "Not enough ETH");
+        payable(owner()).transfer(amount);
+        emit WithdrawalOfOwner(msg.sender, amount);
+    }
+&nbsp;
+    /**
+     * @dev Returns the data of the given token by passing the token id as a parameter.
+     */
+    function getDataAboutHuman(uint256 id_) public view returns (Human memory) {
+        return _peoples[id_];
+    }
+&nbsp;
+    /**
+     * @dev Returns count of 'Family' tokens by passing the address as a parameter.
+     */
+    function getCountOfHumans(address owner_) public view returns (uint256) {
+        return _ownerHumanCount[owner_];
+    }
+&nbsp;
+    /**
+     * @dev Returns address of the token owner by passing the token id as a parameter.
+     */
+    function getOwnerOfHuman(uint256 id_) public view returns (address) {
+        return _humanToOwner[id_];
+    }
+&nbsp;
+    /**
+     * @dev Returns the mint price when users call the mintHuman() function.
+     */
+    function getMintPrice() public view returns (uint256) {
+        return _mintPrice;
+    }
+&nbsp;
+    /**
+     * @dev Returns the actual total supply so far.
+     */
+    function getTotalSupply() public view returns (uint256) {
+        return _totalSupply;
+    }
+&nbsp;
+    /**
+     * @dev Returns max supply.
+     */
+    function getMaxSupply() public view returns (uint256) {
+        return _maxSupply;
+    }
+&nbsp;
+    /**
+     * @dev Returns maturity age.
+     */
+    function getMaturityAge() public view returns (uint256) {
+        return _maturityAge;
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Sep 07 2022 12:23:54 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

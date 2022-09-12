@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/mocks/MockedFamily.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/mocks/</a> MockedFamily.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>33/33</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70.83% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>17/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>30/30</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">135×</span>
+<span class="cline-any cline-yes">135×</span>
+<span class="cline-any cline-yes">135×</span>
+<span class="cline-any cline-yes">135×</span>
+<span class="cline-any cline-yes">67×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">135×</span>
+<span class="cline-any cline-yes">135×</span>
+<span class="cline-any cline-yes">135×</span>
+<span class="cline-any cline-yes">67×</span>
+<span class="cline-any cline-yes">67×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">135×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//SPDX-License-Identifier: Unlicense
+// mocked version of Family contract - *only* used in tests
+pragma solidity 0.8.15;
+&nbsp;
+import "../Family.sol";
+&nbsp;
+/**
+ * @title MockedFamily contract
+ * NOTE: This contract is Mock of Family contract and only for testing purposes
+ * @dev Contract override mintHuman() and breeding() functions and makes random
+ * values more deterministic
+ */
+contract MockedFamily is Family {
+    /**
+     * @dev Constructor the same as in Family
+     * @param mintPrice_ initial mint price for mintHuman()
+     * @param maxSupply_ initial max Supply for tokens
+     * @param maturityAge_ initial maturity age for tokens at which a breeding()
+     * function can be called
+     */
+    constructor(
+        uint256 mintPrice_,
+        uint256 maxSupply_,
+        uint256 maturityAge_
+    ) Family(mintPrice_, maxSupply_, maturityAge_) {}
+&nbsp;
+    /**
+     * @dev Overriden function from Family contract. In case user mint his first NFT
+     * gender will be setted as a MAN type, in other cases gender will be setted as a WOMAN type
+     * @param manName_ The human token name if it will be randomly minted as a MAN token
+     * @param womanName_ The human token name if it will be randomly minted as a WOMAN token
+     * @param lastname_ The human token lastname
+     */
+    function mintHuman(
+        bytes32 manName_,
+        bytes32 womanName_,
+        bytes32 lastname_
+    ) external payable override {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(msg.value &gt;= getMintPrice(), "Not enough ether for a mint");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(getTotalSupply() &lt; getMaxSupply(), "Collection sold out");
+        uint256 random;
+        if (getCountOfHumans(msg.sender) == 0) {
+            random = 0;
+        } else random = 1;
+        GENDER gender;
+        bytes32 name_;
+        if (random == 0) {
+            gender = GENDER.MAN;
+            name_ = manName_;
+        } else <span class="missing-if-branch" title="else path not taken" >E</span>if (random != 0) {
+            gender = GENDER.WOMEN;
+            name_ = womanName_;
+        }
+&nbsp;
+        _mintHuman(getTotalSupply(), gender, name_, lastname_, getMaturityAge());
+    }
+&nbsp;
+    /**
+     * @dev Overriden function from Family contract. In case user has already 3 NFTs when he call
+     * breeding function gender of a KID will be setted as a GIRL type, in other cases gender will
+     * be setted as a BOY type
+     * @param _firstParentID id of first parent token
+     * @param _secondParentID id of second parent token
+     * @param _boyName The human token name if it will be randomly minted as a KID_BOY token
+     * @param _girlName The human token name if it will be randomly minted as a KID_GIRL token
+     */
+    function breeding(
+        uint256 _firstParentID,
+        uint256 _secondParentID,
+        bytes32 _boyName,
+        bytes32 _girlName
+    ) external override {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(getTotalSupply() &lt; getMaxSupply(), "Collection sold out");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_firstParentID != _secondParentID, "One parent cannot reproduce alone");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(
+            getOwnerOfHuman(_firstParentID) == msg.sender &amp;&amp; getOwnerOfHuman(_secondParentID) == msg.sender,
+            "You are not the owner of one or more humans"
+        );
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(
+            checkAgeChanging(_firstParentID) &gt;= 18 &amp;&amp; checkAgeChanging(_secondParentID) == 18,
+            "One or more of your tokens are not mature enough"
+        );
+        require(
+            (getDataAboutHuman(_firstParentID).gender) != (getDataAboutHuman(_secondParentID).gender),
+            "Tokens share the same gender and cannot reproduce themselves"
+        );
+        uint256 random;
+        if (getCountOfHumans(msg.sender) != 3) {
+            random = 0;
+        } else random = 1;
+        GENDER gender;
+        bytes32 name_;
+        if (random == 0) {
+            gender = GENDER.KID_BOY;
+            name_ = _boyName;
+        } else {
+            gender = GENDER.KID_GIRL;
+            name_ = _girlName;
+        }
+        bytes32 lastname_ = getDataAboutHuman(_firstParentID).lastname;
+        _mintHuman(getTotalSupply(), gender, name_, lastname_, 0);
+    }
+}
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Sep 07 2022 12:23:54 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/Stones.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> Stones.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>27/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>8/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>27/27</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">775×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-yes">774×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">66×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: Unlicense
+pragma solidity 0.8.15;
+&nbsp;
+import "@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Burnable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+&nbsp;
+/**
+ * @title Stones contract.
+ * NOTE: The contract of the erc-1155 standard "Stones" NFT tokens.
+ */
+contract Stones is ERC1155Burnable, Ownable {
+    uint256 public constant THUNDER_STONE = 0;
+    uint256 public constant MOON_STONE = 1;
+    uint256 public constant FIRE_STONE = 2;
+    uint256 public constant LEAF_STONE = 3;
+    uint256 public constant SUN_STONE = 4;
+    uint256 public constant WATER_STONE = 5;
+    uint256 public constant BLACK_AUGURITE = 6;
+    uint256 public constant SHINY_STONE = 7;
+    uint256 public constant DUSK_STONE = 8;
+    uint256 public constant RAZOR_CLAW = 9;
+    uint256 public constant PEAT_BLOCK = 10;
+    uint256 public constant TART_APPLE = 11;
+    uint256 public constant CRACKED_POT = 12;
+    uint256 public constant OVAL_STONE = 13;
+    uint256 private _stonePrice;
+&nbsp;
+    /**
+     * @dev Emitted when buyStone() occure.
+     * @param owner owner of the minted tokens.
+     * @param stoneId Id of minted tokens.
+     * @param amount amount of minted tokens.
+     */
+    event StoneBuyed(address owner, uint256 indexed stoneId, uint256 indexed amount);
+&nbsp;
+    /**
+     * @dev Emitted when setStonePrice() occure.
+     * @param newStonePrice new price for `stone` type tokens.
+     * @param timeOfChanging time when update occur.
+     */
+    event StonePriceUpdated(uint256 newStonePrice, uint256 timeOfChanging);
+&nbsp;
+    /**
+     * @dev Emitted when the owner withdraw ether from the contract.
+     * @param owner owner address.
+     * @param amount amount of ether.
+     */
+    event WithdrawalOfOwner(address owner, uint256 indexed amount);
+&nbsp;
+    /**
+     * @dev Sets up the stone price and mint initial tokens to the owner.
+     * @param stonePrice_ initial mint price for stones tokens.
+     */
+    constructor(uint256 stonePrice_) ERC1155("https://game.example/api/item/{id}.json") {
+        require(stonePrice_ &gt; 0, "Stones price cannot be 0");
+        _mint(msg.sender, THUNDER_STONE, 10, "");
+        _mint(msg.sender, MOON_STONE, 11, "");
+        _mint(msg.sender, FIRE_STONE, 12, "");
+        _mint(msg.sender, LEAF_STONE, 13, "");
+        _mint(msg.sender, SUN_STONE, 14, "");
+        _mint(msg.sender, WATER_STONE, 15, "");
+        _mint(msg.sender, BLACK_AUGURITE, 16, "");
+        _mint(msg.sender, SHINY_STONE, 16, "");
+        _mint(msg.sender, DUSK_STONE, 15, "");
+        _mint(msg.sender, RAZOR_CLAW, 14, "");
+        _mint(msg.sender, PEAT_BLOCK, 13, "");
+        _mint(msg.sender, TART_APPLE, 12, "");
+        _mint(msg.sender, CRACKED_POT, 11, "");
+        _mint(msg.sender, OVAL_STONE, 10, "");
+        _stonePrice = stonePrice_;
+    }
+&nbsp;
+    /**
+     * @dev This is a function for buying `stone` type tokens.
+     *
+     * Requirements:
+     *
+     * - providing ether(`msg.value`) must be equal or higher than `_stonePrice`.
+     *
+     * @param stoneId Id of stone to be minted.
+     *
+     * Emits a {StoneBuyed} event.
+     */
+    function buyStone(uint256 stoneId) external payable {
+        require(msg.value &gt;= _stonePrice, "Not enough ETH to buy stone");
+        uint256 amount = (msg.value / _stonePrice);
+        _mint(msg.sender, stoneId, amount, "");
+        emit StoneBuyed(msg.sender, stoneId, amount);
+    }
+&nbsp;
+    /**
+     * @dev Set new `_stonePrice`.
+     * @param newStonePrice_ new price for `stone` type tokens.
+     *
+     * Emits a {StonePriceUpdated} event.
+     */
+    function setStonePrice(uint256 newStonePrice_) external onlyOwner {
+        require(newStonePrice_ &gt; 0, "New token price cannot be zero");
+        _stonePrice = newStonePrice_;
+        emit StonePriceUpdated(_stonePrice, block.timestamp);
+    }
+&nbsp;
+    /**
+     * @dev Returns the stone price.
+     */
+    function getStonePrice() external view returns (uint256) {
+        return _stonePrice;
+    }
+&nbsp;
+    /**
+     * @dev Owner can withdraw Ether from contract.
+     *
+     * Emits a {WithdrawalOfOwner} event.
+     */
+    function withdrawETH(uint256 amount) external onlyOwner {
+        require(amount &lt;= address(this).balance, "Not enough ETH");
+        payable(owner()).transfer(amount);
+        emit WithdrawalOfOwner(msg.sender, amount);
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Sep 12 2022 06:47:48 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
