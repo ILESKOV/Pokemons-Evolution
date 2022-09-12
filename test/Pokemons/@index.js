@@ -1,7 +1,7 @@
 describe("Pokemons", function () {
     require("./constructor")
     require("./mintPokemon")
-    require("./checkAvailableUpgrade")
+    require("./checkAvailableEvolve")
     require("./evolvePokemon")
     require("./setMaxSupply")
     require("./setMintFee")
