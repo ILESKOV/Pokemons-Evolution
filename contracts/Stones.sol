@@ -51,7 +51,7 @@ contract Stones is ERC1155Burnable, Ownable {
      * @dev Sets up the stone price and mint initial tokens to the owner.
      * @param stonePrice_ initial mint price for stones tokens.
      */
-    constructor(uint256 stonePrice_) ERC1155("https://game.example/api/item/{id}.json") {
+    constructor(uint256 stonePrice_) ERC1155("ipfs://bafybeig5yw7u5xy3oynsyxaazkbtu66jxblwexh4aghb3r7dyozdh5upxi/") {
         require(stonePrice_ > 0, "Stones price cannot be 0");
         _mint(msg.sender, THUNDER_STONE, 10, "");
         _mint(msg.sender, MOON_STONE, 11, "");
