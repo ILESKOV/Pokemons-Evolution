@@ -61,7 +61,7 @@ contract Pokemons is PokemonStorage {
      * @param mintTime block.timestamp of mint.
      * @param owner address of the owner of the token.
      */
-    event NewPokemon(uint256 tokenId, uint256 mintTime, address owner);
+    event NewPokemon(uint256 indexed tokenId, uint256 mintTime, address owner);
 
     /**
      * @dev Emitted when evolveWithLevel() occured.
@@ -70,7 +70,7 @@ contract Pokemons is PokemonStorage {
      * @param evolutionTime block.timestamp of evolution.
      * @param owner address of the owner of the token.
      */
-    event EvolvedWithLevel(uint256 tokenId, uint256 newTokenId, uint256 evolutionTime, address indexed owner);
+    event EvolvedWithLevel(uint256 indexed tokenId, uint256 indexed newTokenId, uint256 evolutionTime, address owner);
 
     /**
      * @dev Emitted when evolveWithStone() occured.
