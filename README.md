@@ -3,6 +3,7 @@
 
 ## 📁 Table of Contents
 * [General Info](#-general-information)
+* [Test Already Deployed Contracts](#-test-already-deployed-contracts)
 * [Technologies Used](#-technologies-used)
 * [Features](#-features)
 * [Requirements For Initial Setup](#-requirements-for-initial-setup)
@@ -18,6 +19,17 @@
 - And then the user can use the required token to evolve his NFT Pokemon, while receiving a new NFT of the next Pokemon in the evolutionary chain
 - During evolution, `level` and `stone` tokens are burned 
 
+
+## 🧪 Test Already Deployed Contracts
+
+Try already deployed contract on mumbai test network
+- [here](https://mumbai.polygonscan.com/address/0x0a680E2225a3e2103571AeB5d2B1da3f39766B78#readContract) Level.sol
+- [here](https://mumbai.polygonscan.com/address/0x992c7Ac4eC6e63479a2Aa03Cd6A2a973c68F0D1b#readContract) Stones.sol
+- [here](https://mumbai.polygonscan.com/address/0xb9276ba30c6Dc4884054EE60d82A3C59CC50e2ee#writeContract) Pokemons.sol
+
+You can also visit openSea Testents to see and interact with the collection [here](https://testnets.opensea.io/collection/pokemons-evolution).
+
+<!--![Example screenshot](./helpers/READMEpng/Screenshot9.jpg)-->
 
  
 ## 💻 Technologies Used
