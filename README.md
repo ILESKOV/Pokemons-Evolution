@@ -35,7 +35,7 @@ You can also visit openSea Testents to see and interact with the collection [her
 In order to quick update of Metadata on opensea page just click "Refresh Metadata" button
 
 
-![Example screenshot](./helpers/Screenshot8.png)
+<!--![Example screenshot](./helpers/Screenshot8.png)-->
 
  
 ## 💻 Technologies Used
