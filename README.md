@@ -1,5 +1,5 @@
 # <img src="/helpers/311.jpg" alt="2" width="50" height="50" /><img src="/helpers/243.jpg" alt="4" width="50" height="50" /> Pokemons-Evolution <img src="/helpers/302.jpg" alt="2" width="50" height="50" /><img src="/helpers/312.jpg" alt="4" width="50" height="50" />
-> There are 4 contracts: erc-20 standard Level.sol burnable implementation, erc-1155 Stones.sol burnable implementation, erc-1155 Pokemons.sol implementation and PokemonStorage.sol with [all](https://pokemondb.net/evolution) data of evolution chains
+> There are 4 contracts: erc-20 standard Level.sol burnable implementation, erc-1155 Stones.sol burnable implementation, erc-1155 Pokemons.sol implementation and PokemonStorage.sol with all [data](https://pokemondb.net/evolution) of evolution chains
 
 ## 📁 Table of Contents
 * [General Info](#-general-information)
