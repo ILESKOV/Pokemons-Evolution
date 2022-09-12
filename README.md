@@ -29,7 +29,7 @@ Try already deployed contract on mumbai test network
 
 You can also visit openSea Testents to see and interact with the collection [here](https://testnets.opensea.io/collection/pokemons-evolution).
 
-<!--![Example screenshot](./helpers/READMEpng/Screenshot9.jpg)-->
+![Example screenshot](./helpers/Screenshot9.png)
 
  
 ## 💻 Technologies Used
