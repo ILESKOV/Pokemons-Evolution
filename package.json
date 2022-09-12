@@ -1,0 +1,74 @@
+{
+    "name": "Pokemons",
+    "version": "1.0.0",
+    "description": "The contract allows to mint any pokemon, as well as evolve them following the rules from the official game outside the blockchain",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx hardhat test",
+        "coverage": "npx hardhat coverage --testfiles test",
+        "goerli": "npx hardhat run --network goerli scripts/deploy.js",
+        "goerli:verify:level": "npx hardhat verify --network goerli --contract contracts/Level.sol:Level --constructor-args helpers/levelArgs.js <Level.sol address>",
+        "goerli:verify:stones": "npx hardhat verify --network goerli --contract contracts/Stones.sol:Stones --constructor-args helpers/stonesArgs.js <Stones.sol address>",
+        "goerli:verify:pokemons": "npx hardhat verify --network goerli --contract contracts/Pokemons.sol:Pokemons --constructor-args helpers/pokemonsArgs.js <Pokemons.sol address>",
+        "mainnet ": "npx hardhat run --network ethereum scripts/deploy.js",
+        "mainnet:verify:level": "npx hardhat verify --network ethereum --contract contracts/Level.sol:Level --constructor-args helpers/levelArgs.js <Level.sol address>",
+        "mainnet:verify:stones": "npx hardhat verify --network ethereum --contract contracts/Stones.sol:Stones --constructor-args helpers/stonesArgs.js <Stones.sol address>",
+        "mainnet:verify:pokemons": "npx hardhat verify --network ethereum --contract contracts/Pokemons.sol:Pokemons --constructor-args helpers/pokemonsArgs.js <Pokemons.sol address>",
+        "polygon": "npx hardhat run scripts/deploy.js --network matic",
+        "polygon:verify:level": "npx hardhat verify --network matic --contract contracts/Level.sol:Level --constructor-args helpers/levelArgs.js <Level.sol address>",
+        "polygon:verify:stones": "npx hardhat verify --network matic --contract contracts/Stones.sol:Stones --constructor-args helpers/stonesArgs.js <Stones.sol address>",
+        "polygon:verify:pokemons": "npx hardhat verify --network matic --contract contracts/Pokemons.sol:Pokemons --constructor-args helpers/pokemonsArgs.js <Pokemons.sol address>",
+        "bsc": "npx hardhat run scripts/deploy.js --network bsc",
+        "bsc:verify:level": "npx hardhat verify --network bsc --contract contracts/Level.sol:Level --constructor-args helpers/levelArgs.js <Level.sol address>",
+        "bsc:verify:stones": "npx hardhat verify --network bsc --contract contracts/Stones.sol:Stones --constructor-args helpers/stonesArgs.js <Stones.sol address>",
+        "bsc:verify:pokemons": "npx hardhat verify --network bsc --contract contracts/Pokemons.sol:Pokemons --constructor-args helpers/pokemonsArgs.js <Pokemons.sol address>",
+        "fuji": "npx hardhat run scripts/deploy.js --network fuji",
+        "fuji:verify:level": "npx hardhat verify --network fuji --contract contracts/Level.sol:Level --constructor-args helpers/levelArgs.js <Level.sol address>",
+        "fuji:verify:stones": "npx hardhat verify --network fuji --contract contracts/Stones.sol:Stones --constructor-args helpers/stonesArgs.js <Stones.sol address>",
+        "fuji:verify:pokemons": "npx hardhat verify --network fuji --contract contracts/Pokemons.sol:Pokemons --constructor-args helpers/pokemonsArgs.js <Pokemons.sol address>",
+        "fantom": "npx hardhat run scripts/deploy.js --network fantom",
+        "fantom:verify:level": "npx hardhat verify --network fantom --contract contracts/Level.sol:Level --constructor-args helpers/levelArgs.js <Level.sol address>",
+        "fantom:verify:stones": "npx hardhat verify --network fantom --contract contracts/Stones.sol:Stones --constructor-args helpers/stonesArgs.js <Stones.sol address>",
+        "fantom:verify:pokemons": "npx hardhat verify --network fantom --contract contracts/Pokemons.sol:Pokemons --constructor-args helpers/pokemonsArgs.js <Pokemons.sol address>",
+        "prettier": "prettier --write 'contracts/'",
+        "docgen": "npx hardhat docgen",
+        "slither": "slither .",
+        "solhint": "solhint 'contracts/**/*.sol'",
+        "size": "npx hardhat size-contracts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ILESKOV/Pokemon-Evolution.git"
+    },
+    "keywords": [
+        "nft",
+        "erc20",
+        "erc1155",
+        "pokemon",
+        "smart-contract",
+        "solidity",
+        "crypto"
+    ],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ILESKOV/Pokemon-Evolution/issues"
+    },
+    "homepage": "https://github.com/ILESKOV/Pokemon-Evolution#readme",
+    "devDependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+        "@nomiclabs/hardhat-ethers": "^2.1.0",
+        "hardhat": "^2.10.1",
+        "prettier": "^2.7.1",
+        "prettier-plugin-solidity": "^1.0.0-dev.23"
+    },
+    "dependencies": {
+        "@nomiclabs/hardhat-solhint": "^2.0.1",
+        "@nomiclabs/hardhat-waffle": "^2.0.3",
+        "@openzeppelin/contracts": "^4.7.0",
+        "dotenv": "^16.0.1",
+        "fs": "^0.0.1-security",
+        "hardhat-contract-sizer": "^2.6.1",
+        "solidity-docgen": "^0.6.0-beta.22"
+    }
+}
