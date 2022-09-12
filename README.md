@@ -31,6 +31,12 @@ You can also visit openSea Testents to see and interact with the collection [her
 
 ![Example screenshot](./helpers/Screenshot9.png)
 
+### NOTE
+In order to quick update of Metadata on opensea page just click "Refresh Metadata" button
+
+
+![Example screenshot](./helpers/Screenshot8.png)
+
  
 ## 💻 Technologies Used
 - ipfs
@@ -152,12 +158,6 @@ $ npm run polygon:verify:level
 $ npm run polygon:verify:stones
 $ npm run polygon:verify:pokemons
 ``` 
-
-### NOTE
-In order to quick update of Metadata on opensea page just click "Refresh Metadata" button
-
-
-![Example screenshot](./helpers/Screenshot8.png)
 
 
 ## 💬 Contact
