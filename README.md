@@ -28,14 +28,14 @@ Try already deployed contract on mumbai test network
 - [here](https://mumbai.polygonscan.com/address/0xb9276ba30c6Dc4884054EE60d82A3C59CC50e2ee#writeContract) Pokemons.sol
 
 You can also visit openSea Testents to see and interact with the collection [here](https://testnets.opensea.io/collection/pokemons-evolution).
-
-![Example screenshot](./helpers/Screenshot9.png)
-
 ### NOTE
 In order to quick update of Metadata on opensea page just click "Refresh Metadata" button
 
 
 <!--![Example screenshot](./helpers/Screenshot8.png)-->
+
+![Example screenshot](./helpers/Screenshot9.png)
+
 
  
 ## 💻 Technologies Used
@@ -129,7 +129,7 @@ $ npm run mainnet
 $ npm run polygon
 ``` 
 
-!!!Important!!! 
+### NOTE
 insert current Level.sol and Stones.sol contract address into your environment variables(.env file)
 ``` 
 LEVEL_ADDRESS = <Level.sol address>
