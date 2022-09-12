@@ -81,11 +81,11 @@ contract Pokemons is PokemonStorage {
      * @param owner address of the owner of the token.
      */
     event EvolvedWithStone(
-        uint256 tokenId,
-        uint256 newTokenId,
+        uint256 indexed tokenId,
+        uint256 indexed newTokenId,
         uint256 stoneId,
         uint256 evolutionTime,
-        address indexed owner
+        address owner
     );
 
     /**
