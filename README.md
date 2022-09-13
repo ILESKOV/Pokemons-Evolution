@@ -1,4 +1,4 @@
-# <!--<img src="/helpers/311.jpg" alt="2" width="50" height="50" /><img src="/helpers/243.jpg" alt="4" width="50" height="50" />--> <img src="./helpers/1.png" alt="4" width="50" height="50" />Pokemons-Evolution <img src="./helpers/1.png" alt="4" width="50" height="50" /><!--<img src="/helpers/302.jpg" alt="2" width="50" height="50" /><img src="/helpers/312.jpg" alt="4" width="50" height="50" />-->
+# <!--<img src="/helpers/readmeHelpers/311.jpg" alt="2" width="50" height="50" /><img src="/helpers/readmeHelpers/243.jpg" alt="4" width="50" height="50" />--> <img src="./helpers/readmeHelpers/1.png" alt="4" width="50" height="50" />Pokemons-Evolution <img src="./helpers/readmeHelpers/1.png" alt="4" width="50" height="50" /><!--<img src="/helpers/readmeHelpers/302.jpg" alt="2" width="50" height="50" /><img src="/helpers/readmeHelpers/312.jpg" alt="4" width="50" height="50" />-->
 > There are 4 contracts: erc-20 standard Level.sol burnable implementation, erc-1155 Stones.sol burnable implementation, erc-1155 Pokemons.sol implementation and PokemonStorage.sol with all [data](https://pokemondb.net/evolution) of evolution chains
 
 ## 📁 Table of Contents
@@ -32,9 +32,9 @@ You can also visit openSea Testents to see and interact with the collection [her
 In order to quick update of Metadata on opensea page just click "Refresh Metadata" button
 
 
-<!--![Example screenshot](./helpers/Screenshot8.png)-->
+<!--![Example screenshot](./helpers/readmeHelpers/Screenshot8.png)-->
 
-![Example screenshot](./helpers/Screenshot9.png)
+![Example screenshot](./helpers/readmeHelpers/Screenshot9.png)
 
 
  
@@ -137,7 +137,7 @@ STONES_ADDRESS = <Level.sol address>
 ``` 
 
 ### 6. ✏️ Insert current contract addresses into package.json
-![Example screenshot](./helpers/Screenshot7.png)
+![Example screenshot](./helpers/readmeHelpers/Screenshot7.png)
 
 ### 7. 📜 Verify contracts depending on the network
 - Verify GOERLI
