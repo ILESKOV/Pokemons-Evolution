@@ -46,10 +46,10 @@ In order to quick update of Metadata on opensea page just click "Refresh Metadat
 - solhint
 
 ## 🌟 Features
-- all 905 Pokemons with metadata and additional combat stats are waiting on OpenSea to be minted
-- original game evolution chains implemented
-- contract checked with security tools
-- 100% coverage of tests
+- all 905 Pokemons with metadata and additional combat stats are waiting on OpenSea to be minted<img src="./helpers/readmeHelpers/11.gif" alt="4" width="50" height="50" />
+- original game evolution chains implemented<img src="./helpers/readmeHelpers/17.gif" alt="4" width="50" height="50" />
+- contract checked with security tools<img src="./helpers/readmeHelpers/15.png" alt="4" width="50" height="50" />
+- 100% coverage of tests<img src="./helpers/readmeHelpers/10.png" alt="4" width="50" height="50" />
 
 ## 👀 Requirements For Initial Setup
 - Install [NodeJS](https://nodejs.org/en/), should work with any node version below 16.16.0
