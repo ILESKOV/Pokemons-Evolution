@@ -48,7 +48,7 @@ In order to quick update of Metadata on opensea page just click "Refresh Metadat
 ## 🌟 Features
 - all 905 Pokemons with metadata and additional combat stats are waiting on OpenSea to be minted <img src="./helpers/readmeHelpers/11.gif" alt="4" width="30" height="30" />
 - original game evolution chains implemented <img src="./helpers/readmeHelpers/17.gif" alt="4" width="30" height="30" />
-- contract checked with security tools <img src="./helpers/readmeHelpers/15.gif" alt="4" width="30" height="30" />
+- contract checked with security tools <img src="./helpers/readmeHelpers/16.gif" alt="4" width="30" height="30" />
 - 100% coverage of tests <img src="./helpers/readmeHelpers/10.gif" alt="4" width="30" height="30" />
 
 ## 👀 Requirements For Initial Setup
