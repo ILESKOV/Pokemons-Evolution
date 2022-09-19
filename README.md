@@ -100,7 +100,7 @@ MINT_POKEMON_FEE  = <Example: 10000000>
 UPGRADE_IN_LEVEL_FEE  = <Example: 16000000000000000000>
 MAX_SUPPLY = <Example: 100000>
 LEVEL_ADDRESS = <Level.sol address>
-STONES_ADDRESS = <Level.sol address>
+STONES_ADDRESS = <Stones.sol address>
 
 ```
 
