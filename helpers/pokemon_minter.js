@@ -15,7 +15,7 @@ const contract = new ethers.Contract(address, ABI, provider)
 const main = async () => {
     const contractWithWallet = contract.connect(wallet)
     for (let i = 0; i < 10; i++) {
-        const tx = await contractWithWallet.mintPokemon({ value: ethers.utils.parseEther("0.0025") })
+        const tx = await contractWithWallet.mintPokemon({ value: ethers.utils.parseEther("0.00001") })
         await tx.wait()
 
         console.log(tx)
