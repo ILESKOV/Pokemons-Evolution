@@ -64,7 +64,7 @@ contract Pokemons is PokemonStorage {
     event NewPokemon(uint256 indexed tokenId, uint256 mintTime, address owner);
 
     /**
-     * @dev Emitted when evolveWithLevel() occured.
+     * @dev Emitted when _evolveWithLevel() occured.
      * @param tokenId token Id.
      * @param newTokenId token Id of new Token.
      * @param evolutionTime block.timestamp of evolution.
@@ -73,7 +73,7 @@ contract Pokemons is PokemonStorage {
     event EvolvedWithLevel(uint256 indexed tokenId, uint256 indexed newTokenId, uint256 evolutionTime, address owner);
 
     /**
-     * @dev Emitted when evolveWithStone() occured.
+     * @dev Emitted when _evolveWithStone() occured.
      * @param tokenId token Id.
      * @param newTokenId token Id of new Token.
      * @param stoneId Id of the stone erc-1155 token that was used to evolve the pokemon.
@@ -148,7 +148,7 @@ contract Pokemons is PokemonStorage {
      * - If such an evolution option exists, the user must buy level/stone tokens depending on the type of evolution.
      * - The user must buy and approve one `stone` type token for this contract if the evolutionWithStone() occured.
      * - The user must buy and approve `_evolveLevelFee` amount of `level` tokens for this contract if
-     * the evolveWithLevel() occured.
+     * the _evolveWithLevel() occured.
      *
      * @param pokemonNumber_ pokemon id to be evolved.
      *
@@ -159,9 +159,9 @@ contract Pokemons is PokemonStorage {
         require(balanceOf(msg.sender, pokemonNumber_) > 0, "Caller not the owner");
         (uint256 whichMethodOfEvolve, uint256 newPokemonId) = checkAvailableEvolve(pokemonNumber_);
         if (whichMethodOfEvolve < 14) {
-            evolveWithStone(pokemonNumber_, newPokemonId, whichMethodOfEvolve);
+            _evolveWithStone(pokemonNumber_, newPokemonId, whichMethodOfEvolve);
         } else if (whichMethodOfEvolve == 14) {
-            evolveWithLevel(pokemonNumber_);
+            _evolveWithLevel(pokemonNumber_);
         } else revert("Token cannot be updated");
     }
 
@@ -183,7 +183,7 @@ contract Pokemons is PokemonStorage {
      *
      * Emits a {EvolvedWithStone} event.
      */
-    function evolveWithStone(
+    function _evolveWithStone(
         uint256 pokemonNumber_,
         uint256 newPokemonId_,
         uint256 whichStoneToUse_
@@ -210,52 +210,12 @@ contract Pokemons is PokemonStorage {
      *
      * Emits a {EvolvedWithLevel} event.
      */
-    function evolveWithLevel(uint256 pokemonNumber_) private {
+    function _evolveWithLevel(uint256 pokemonNumber_) private {
         _level.burnFrom(msg.sender, _evolveLevelFee);
         uint256 newPokemonId = pokemonNumber_ + 1;
         _mint(msg.sender, newPokemonId, 1, "");
         _totalSupply++;
         emit EvolvedWithLevel(pokemonNumber_, newPokemonId, block.timestamp, msg.sender);
-    }
-
-    /**
-     * @dev This is a function to check if evolution is available, and if so, which one.
-     * Function return Id of stone or data saying that `level` evolution is available or data saying
-     * that this Pokémon cannot be evolved.
-     * @param pokemonNumber_ pokemon Id to get evolution data.
-     */
-    function checkAvailableEvolve(uint256 pokemonNumber_) public view returns (uint256, uint256) {
-        if (true == isEvolveNotAvailable(pokemonNumber_)) {
-            return (15, 0);
-        } else if (isThunderEvolveAvailable(pokemonNumber_) != 0) {
-            return (0, isThunderEvolveAvailable(pokemonNumber_));
-        } else if (isMoonEvolveAvailable(pokemonNumber_) != 0) {
-            return (1, isMoonEvolveAvailable(pokemonNumber_));
-        } else if (isFireEvolveAvailable(pokemonNumber_) != 0) {
-            return (2, isFireEvolveAvailable(pokemonNumber_));
-        } else if (isLeafEvolveAvailable(pokemonNumber_) != 0) {
-            return (3, isLeafEvolveAvailable(pokemonNumber_));
-        } else if (isSunEvolveAvailable(pokemonNumber_) != 0) {
-            return (4, isSunEvolveAvailable(pokemonNumber_));
-        } else if (isWaterEvolveAvailable(pokemonNumber_) != 0) {
-            return (5, isWaterEvolveAvailable(pokemonNumber_));
-        } else if (isBlackAuguriteEvolveAvailable(pokemonNumber_) != 0) {
-            return (6, isBlackAuguriteEvolveAvailable(pokemonNumber_));
-        } else if (isShinyEvolveAvailable(pokemonNumber_) != 0) {
-            return (7, isShinyEvolveAvailable(pokemonNumber_));
-        } else if (isDuskEvolveAvailable(pokemonNumber_) != 0) {
-            return (8, isDuskEvolveAvailable(pokemonNumber_));
-        } else if (isRazorClawEvolveAvailable(pokemonNumber_) != 0) {
-            return (9, isRazorClawEvolveAvailable(pokemonNumber_));
-        } else if (isPeatBlockEvolveAvailable(pokemonNumber_) != 0) {
-            return (10, isPeatBlockEvolveAvailable(pokemonNumber_));
-        } else if (isTartAppleEvolveAvailable(pokemonNumber_) != 0) {
-            return (11, isTartAppleEvolveAvailable(pokemonNumber_));
-        } else if (isCrackedPotEvolveAvailable(pokemonNumber_) != 0) {
-            return (12, isCrackedPotEvolveAvailable(pokemonNumber_));
-        } else if (isOvalEvolveAvailable(pokemonNumber_) != 0) {
-            return (13, isOvalEvolveAvailable(pokemonNumber_));
-        } else return (14, 16);
     }
 
     /**
@@ -339,7 +299,7 @@ contract Pokemons is PokemonStorage {
     /**
      * @dev Returns max supply.
      */
-    function getMaxSupply() public view returns (uint256) {
+    function getMaxSupply() external view returns (uint256) {
         return _maxSupply;
     }
 
@@ -374,7 +334,7 @@ contract Pokemons is PokemonStorage {
     /**
      * @dev Returns the actual total supply so far.
      */
-    function getTotalSupply() public view returns (uint256) {
+    function getTotalSupply() external view returns (uint256) {
         return _totalSupply;
     }
 }
