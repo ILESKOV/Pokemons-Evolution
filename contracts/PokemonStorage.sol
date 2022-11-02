@@ -149,6 +149,46 @@ contract PokemonStorage is ERC1155, Ownable {
     }
 
     /**
+     * @dev This is a function to check if evolution is available, and if so, which one.
+     * Function return Id of stone or data saying that `level` evolution is available or data saying
+     * that this Pokémon cannot be evolved.
+     * @param pokemonNumber_ pokemon Id to get evolution data.
+     */
+    function checkAvailableEvolve(uint256 pokemonNumber_) public view returns (uint256, uint256) {
+        if (true == isEvolveNotAvailable(pokemonNumber_)) {
+            return (15, 0);
+        } else if (isThunderEvolveAvailable(pokemonNumber_) != 0) {
+            return (0, isThunderEvolveAvailable(pokemonNumber_));
+        } else if (isMoonEvolveAvailable(pokemonNumber_) != 0) {
+            return (1, isMoonEvolveAvailable(pokemonNumber_));
+        } else if (isFireEvolveAvailable(pokemonNumber_) != 0) {
+            return (2, isFireEvolveAvailable(pokemonNumber_));
+        } else if (isLeafEvolveAvailable(pokemonNumber_) != 0) {
+            return (3, isLeafEvolveAvailable(pokemonNumber_));
+        } else if (isSunEvolveAvailable(pokemonNumber_) != 0) {
+            return (4, isSunEvolveAvailable(pokemonNumber_));
+        } else if (isWaterEvolveAvailable(pokemonNumber_) != 0) {
+            return (5, isWaterEvolveAvailable(pokemonNumber_));
+        } else if (isBlackAuguriteEvolveAvailable(pokemonNumber_) != 0) {
+            return (6, isBlackAuguriteEvolveAvailable(pokemonNumber_));
+        } else if (isShinyEvolveAvailable(pokemonNumber_) != 0) {
+            return (7, isShinyEvolveAvailable(pokemonNumber_));
+        } else if (isDuskEvolveAvailable(pokemonNumber_) != 0) {
+            return (8, isDuskEvolveAvailable(pokemonNumber_));
+        } else if (isRazorClawEvolveAvailable(pokemonNumber_) != 0) {
+            return (9, isRazorClawEvolveAvailable(pokemonNumber_));
+        } else if (isPeatBlockEvolveAvailable(pokemonNumber_) != 0) {
+            return (10, isPeatBlockEvolveAvailable(pokemonNumber_));
+        } else if (isTartAppleEvolveAvailable(pokemonNumber_) != 0) {
+            return (11, isTartAppleEvolveAvailable(pokemonNumber_));
+        } else if (isCrackedPotEvolveAvailable(pokemonNumber_) != 0) {
+            return (12, isCrackedPotEvolveAvailable(pokemonNumber_));
+        } else if (isOvalEvolveAvailable(pokemonNumber_) != 0) {
+            return (13, isOvalEvolveAvailable(pokemonNumber_));
+        } else return (14, 16);
+    }
+
+    /**
      * @dev Stores data on all `stone` type evolving opportunities and all latest Pokémons in
      * the chain of evolution.
      */
